@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=38BDF8&center=true&vCenter=true&width=720&lines=Network+Administration+student.;Linux+systems+%C2%B7+networks+%C2%B7+security-minded+building.;Making+infrastructure+clear%2C+stable%2C+and+useful.">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=38BDF8&center=true&vCenter=true&width=720&lines=Network+Administration+student.;Linux+systems+%C2%B7+networks+%C2%B7+security-minded+building.;Making+infrastructure+clear%2C+stable%2C+and+useful." alt="Network Administration student focused on Linux systems and networks" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=38BDF8&center=true&vCenter=true&width=720&lines=Network+Administration+student.;Linux+systems+%C2%B7+networks+%C2%B7+security-minded+building." alt="Network Administration student focused on Linux systems and networks" />
   </a>
 </p>
 
