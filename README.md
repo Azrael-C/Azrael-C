@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="./assets/azrael-command-center.png" alt="Midnight-blue digital horizon with an illuminated path" width="100%" />
+  <img src="./assets/netad-command-center.png" alt="Blue network operations command center with connected nodes" width="100%" />
 </p>
 
-<h1 align="center">Seraph</h1>
+<h1 align="center"><code>root@azrael-c:~$ whoami</code></h1>
 
 <p align="center">
-  <a href="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=22D3EE&center=true&vCenter=true&width=620&lines=Building+clear+tools+for+real-world+decisions.;TypeScript+%C2%B7+React+%C2%B7+Next.js+%C2%B7+Python;Civic+tech%2C+data%2C+and+thoughtful+UX.">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=22D3EE&center=true&vCenter=true&width=620&lines=Building+clear+tools+for+real-world+decisions.;TypeScript+%C2%B7+React+%C2%B7+Next.js+%C2%B7+Python;Civic+tech%2C+data%2C+and+thoughtful+UX." alt="Building clear tools for real-world decisions" />
+  <a href="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=38BDF8&center=true&vCenter=true&width=720&lines=Network+Administration+student.;Linux+systems+%C2%B7+networks+%C2%B7+security-minded+building.;Making+infrastructure+clear%2C+stable%2C+and+useful.">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=38BDF8&center=true&vCenter=true&width=720&lines=Network+Administration+student.;Linux+systems+%C2%B7+networks+%C2%B7+security-minded+building.;Making+infrastructure+clear%2C+stable%2C+and+useful." alt="Network Administration student focused on Linux systems and networks" />
   </a>
 </p>
 
@@ -17,23 +17,24 @@
 
 <br />
 
-## `> about_me`
+## `> whoami`
 
-I build useful, human-centered web experiences—especially tools that help people navigate public services, environmental information, and day-to-day decisions with more confidence.
+I'm a Network Administration student with a builder's mindset: I like understanding the systems behind the screen, from Linux environments and network fundamentals to the applications people rely on every day.
 
 ```txt
-focus      → practical interfaces · accessible flows · reliable data
-currently  → full-stack TypeScript applications and public-interest tooling
-mindset    → make complex things feel calm, clear, and usable
+role       → Network Administration student
+mission    → secure · stable · observable systems
+toolbox    → Linux · networks · web systems · data
+mindset    → make complex things calm, clear, and usable
 ```
 
-## `> selected_work`
+## `> field_projects`
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3>CLSU FacultyConnect</h3>
-      <p>Secure consultation scheduling and service operations for faculty guidance.</p>
+      <p>A secure consultation scheduling and service-operations platform for faculty guidance.</p>
       <a href="https://www.clsufacultyconnect.com">Live site</a> · <a href="https://github.com/Azrael-C/CLIRDEC_CONSULTATION_Website">Repository</a>
     </td>
     <td width="50%" valign="top">
@@ -56,13 +57,13 @@ mindset    → make complex things feel calm, clear, and usable
   </tr>
 </table>
 
-## `> toolkit`
+## `> toolkit --active`
 
 <p>
-  <img src="https://skillicons.dev/icons?i=ts,react,nextjs,vite,php,python,java,postgres,supabase,tailwind,git,github&theme=dark" alt="TypeScript, React, Next.js, Vite, PHP, Python, Java, PostgreSQL, Supabase, Tailwind CSS, Git, and GitHub" />
+  <img src="https://skillicons.dev/icons?i=linux,bash,nginx,ts,react,nextjs,vite,php,python,java,postgres,supabase,tailwind,git,github&theme=dark" alt="Linux, Bash, Nginx, TypeScript, React, Next.js, Vite, PHP, Python, Java, PostgreSQL, Supabase, Tailwind CSS, Git, and GitHub" />
 </p>
 
-## `> signals`
+## `> telemetry`
 
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=Azrael-C&show_icons=true&hide_title=true&include_all_commits=true&count_private=true&theme=transparent&hide_border=true&title_color=22D3EE&icon_color=38BDF8&text_color=94A3B8&ring_color=22D3EE" alt="GitHub activity summary" />
@@ -73,4 +74,4 @@ mindset    → make complex things feel calm, clear, and usable
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Azrael-C&bg_color=00000000&color=94A3B8&line=22D3EE&point=F8FAFC&area=true&area_color=0EA5E9&hide_border=true" alt="Contribution activity graph" />
 </p>
 
-<p align="center"><sub>Made with intent, iterated with curiosity.</sub></p>
+<p align="center"><sub>Always learning. Always documenting.</sub></p>
