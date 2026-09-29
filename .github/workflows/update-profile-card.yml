@@ -1,0 +1,36 @@
+name: Refresh profile status card
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update-profile-card.yml"
+      - "scripts/generate-profile-card.mjs"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build the live profile card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-profile-card.mjs
+      - name: Commit refreshed data when it changed
+        run: |
+          if git diff --quiet -- assets/network-status.svg; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/network-status.svg
+          git commit -m "chore: refresh profile status"
+          git push
