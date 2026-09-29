@@ -1,0 +1,98 @@
+{
+  "imageScale": 1,
+  "imageColor": "#0969DA, #58A6FF",
+  "backgroundColor": "#F6F8FA, #0D1117",
+  "separatorColor": "#57606A, #30363D",
+  "sections": [
+    {
+      "title": "{{username}}@github",
+      "titleColor": {
+        "text": "#0969DA, #58A6FF",
+        "line": "#57606A, #8B949E"
+      },
+      "fields": [
+        {
+          "key": "Name",
+          "value": "{{name}}",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "Track",
+          "value": "Network Administration",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "Focus",
+          "value": "Linux, Networks, Security",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "Stack",
+          "value": "TypeScript, React, PHP, Python",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        }
+      ]
+    },
+    {
+      "title": "- Current Projects",
+      "titleColor": {
+        "text": "#0969DA, #58A6FF",
+        "line": "#57606A, #8B949E"
+      },
+      "fields": [
+        {
+          "key": "FacultyConnect",
+          "value": "Secure consultation platform",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "HazardLens PH",
+          "value": "Hazard-awareness explorer",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "AgosLens PH",
+          "value": "Flood and river explorer",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "title": "- GitHub Stats",
+    "titleColor": {
+      "text": "#0969DA, #58A6FF",
+      "line": "#57606A, #8B949E"
+    },
+    "rows": [
+      {
+        "left": {
+          "key": "Repos",
+          "value": "{{repos}}"
+        },
+        "right": {
+          "key": "Stars",
+          "value": "{{stars}}"
+        }
+      },
+      {
+        "left": {
+          "key": "Commits",
+          "value": "{{commits}}"
+        },
+        "right": {
+          "key": "Followers",
+          "value": "{{followers}}"
+        }
+      },
+      "loc"
+    ]
+  }
+}
