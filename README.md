@@ -1,28 +1,8 @@
-```text
-                             /\                           azrael-c@archbox
-                            /  \                          -----------------
-                           /\   \                         Theme:      Arch CLI / Fastfetch
-                          /      \                        Track:      Network Administration
-                         /   ,,   \                       Focus:      Linux · networks · security
-                        /   |  |   \                      Prompt:     [azrael-c@netlab ~]$
-                       /_-''    ''-_\                    Palette:    arch blue · graphite
-                                                          Editor:     VS Code
-                                                          Stack:      TypeScript · React · PHP · Python · Java
-
-  ──[ system.status ]────────────────────────────────────────────────────────
-  repos        8 public projects        stars        1 earned
-  followers    3                         following    2
-
-  ──[ active.projects ]──────────────────────────────────────────────────────
-  · CLSU FacultyConnect  — secure consultation and service operations
-  · HazardLens PH        — hazard-awareness explorer
-  · AgosLens PH          — flood-potential and river-condition explorer
-  · ARGUS                — unified security monitoring
-
-  ──[ pacman.queue ]─────────────────────────────────────────────────────────
-  Linux administration · network fundamentals · secure systems · observability
-
-  ──[ profile.status ]────────────────────────────────────────────────────────
-  $ echo "make it stable, then make it useful"
-  make it stable, then make it useful
-```
+<p align="center">
+  <a href="https://github.com/jeantimex/neofetch-profile">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://neofetch-profile.vercel.app/api?username=Azrael-C&amp;theme=github-dark&amp;config=https%3A%2F%2Fraw.githubusercontent.com%2FAzrael-C%2FAzrael-C%2Fmain%2Fneofetch.json" />
+      <img alt="Azrael-C's live Neofetch profile" src="https://neofetch-profile.vercel.app/api?username=Azrael-C&amp;theme=github-light&amp;config=https%3A%2F%2Fraw.githubusercontent.com%2FAzrael-C%2FAzrael-C%2Fmain%2Fneofetch.json" />
+    </picture>
+  </a>
+</p>
