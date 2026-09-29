@@ -1,36 +1,38 @@
 {
+  "image": "https://raw.githubusercontent.com/Azrael-C/Azrael-C/main/assets/network-admin-mark.png",
+  "coloredImage": false,
   "imageScale": 1.3,
   "imageColor": "#0969DA, #58A6FF",
   "backgroundColor": "#F6F8FA, #0D1117",
   "separatorColor": "#57606A, #30363D",
   "sections": [
     {
-      "title": "{{username}}@github",
+      "title": "~$ whoami",
       "titleColor": {
         "text": "#0969DA, #58A6FF",
         "line": "#57606A, #8B949E"
       },
       "fields": [
         {
-          "key": "Name",
+          "key": "user.name",
           "value": "{{name}}",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         },
         {
-          "key": "Track",
+          "key": "user.role",
           "value": "Network Administration",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         },
         {
-          "key": "Focus",
+          "key": "user.focus",
           "value": "Linux, Networks, Security",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         },
         {
-          "key": "Stack",
+          "key": "user.stack",
           "value": "TypeScript, React, PHP, Python, Networking",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
@@ -38,7 +40,7 @@
       ]
     },
     {
-      "title": "- Toolkit",
+      "title": "~$ pacman -Qe | grep toolkit",
       "titleColor": {
         "text": "#0969DA, #58A6FF",
         "line": "#57606A, #8B949E"
@@ -46,32 +48,38 @@
       "fields": [
         {
           "key": "Languages",
-          "value": "TypeScript, PHP, Python, Java, SQL",
+          "value": "Python, Bash, PowerShell, TypeScript, PHP",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         },
         {
-          "key": "Web Stack",
-          "value": "React, Next.js, Vite, Supabase",
+          "key": "NetAdmin Tools",
+          "value": "Nmap, Wireshark, Cisco Packet Tracer",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         },
         {
-          "key": "IDE",
+          "key": "IDE / Editor",
           "value": "VS Code",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         },
         {
+          "key": "Network Services",
+          "value": "TCP/IP, DNS, DHCP, SSH",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
           "key": "CLI",
-          "value": "Bash, Git, GitHub",
+          "value": "Linux, Bash, Git, GitHub",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         }
       ]
     },
     {
-      "title": "- Current Projects",
+      "title": "~$ ls ~/projects",
       "titleColor": {
         "text": "#0969DA, #58A6FF",
         "line": "#57606A, #8B949E"
@@ -98,7 +106,7 @@
       ]
     },
     {
-      "title": "- Interests & Context",
+      "title": "~$ cat ~/interests.txt",
       "titleColor": {
         "text": "#0969DA, #58A6FF",
         "line": "#57606A, #8B949E"
@@ -125,7 +133,7 @@
       ]
     },
     {
-      "title": "- Contact",
+      "title": "~$ curl -s contact",
       "titleColor": {
         "text": "#0969DA, #58A6FF",
         "line": "#57606A, #8B949E"
@@ -147,7 +155,7 @@
     }
   ],
   "stats": {
-    "title": "- GitHub Stats",
+    "title": "~$ git shortlog -sne",
     "titleColor": {
       "text": "#0969DA, #58A6FF",
       "line": "#57606A, #8B949E"
