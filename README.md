@@ -1,13 +1,13 @@
 ```text
-                         _                              azrael-c@netlab
-       .----.           | |                             ----------------
-    .-'      '-.        | |                             Theme:      Kali / Linux terminal
-   /   .--.     \       | |                             Track:      Network Administration
-  |   (    )     |      | |                             Focus:      Linux · networks · security
-   \   '--'     /       | |                             Shell:      bash
-    '-.______.-'        |_|                             Editor:     VS Code
-       /  /\  \                                         Stack:      TypeScript · React · PHP · Python · Java
-      /__/  \__\
+                             /\                           azrael-c@archbox
+                            /  \                          -----------------
+                           /\   \                         Theme:      Arch CLI / Fastfetch
+                          /      \                        Track:      Network Administration
+                         /   ,,   \                       Focus:      Linux · networks · security
+                        /   |  |   \                      Prompt:     [azrael-c@netlab ~]$
+                       /_-''    ''-_\                    Palette:    arch blue · graphite
+                                                          Editor:     VS Code
+                                                          Stack:      TypeScript · React · PHP · Python · Java
 
   ──[ system.status ]────────────────────────────────────────────────────────
   repos        8 public projects        stars        1 earned
@@ -19,7 +19,7 @@
   · AgosLens PH          — flood-potential and river-condition explorer
   · ARGUS                — unified security monitoring
 
-  ──[ now.learning ]─────────────────────────────────────────────────────────
+  ──[ pacman.queue ]─────────────────────────────────────────────────────────
   Linux administration · network fundamentals · secure systems · observability
 
   ──[ profile.status ]────────────────────────────────────────────────────────
