@@ -1,21 +1,8 @@
 <p align="center">
-  <img src="./assets/netad-command-center.png" alt="Blue network operations command center with connected nodes" width="100%" />
+  <img src="./assets/network-status.svg" alt="Live Linux terminal-style profile status for Azrael-C" width="100%" />
 </p>
 
-<h1 align="center"><code>root@azrael-c:~$ whoami</code></h1>
-
-<p align="center">
-  <a href="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=38BDF8&center=true&vCenter=true&width=720&lines=Network+Administration+student.;Linux+systems+%C2%B7+networks+%C2%B7+security-minded+building.;Making+infrastructure+clear%2C+stable%2C+and+useful.">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=38BDF8&center=true&vCenter=true&width=720&lines=Network+Administration+student.;Linux+systems+%C2%B7+networks+%C2%B7+security-minded+building." alt="Network Administration student focused on Linux systems and networks" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Azrael-C?tab=repositories"><img src="https://img.shields.io/badge/explore%20my%20work-0B1220?style=for-the-badge&logo=github&logoColor=white" alt="Explore my work" /></a>
-  <img src="https://komarev.com/ghpvc/?username=Azrael-C&style=for-the-badge&color=0EA5E9&label=PROFILE+VIEWS" alt="Profile views" />
-</p>
-
-<br />
+<p align="center"><sub>Live public GitHub telemetry · refreshed daily</sub></p>
 
 ## `> whoami`
 
