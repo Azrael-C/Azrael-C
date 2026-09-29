@@ -1,0 +1,135 @@
+import { mkdir, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+
+const owner = process.env.PROFILE_OWNER ?? process.env.GITHUB_REPOSITORY_OWNER ?? "Azrael-C";
+const outputPath = resolve("assets/network-status.svg");
+const token = process.env.GITHUB_TOKEN;
+
+function escapeXml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+async function github(path) {
+  const response = await fetch(`https://api.github.com${path}`, {
+    headers: {
+      Accept: "application/vnd.github+json",
+      "User-Agent": "profile-status-card",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`GitHub API request failed: ${response.status} ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
+const [user, repositoryResponse] = await Promise.all([
+  github(`/users/${encodeURIComponent(owner)}`),
+  github(`/users/${encodeURIComponent(owner)}/repos?per_page=100&sort=updated`),
+]);
+
+const repositories = repositoryResponse.filter((repository) => !repository.fork);
+const totalStars = repositories.reduce((total, repository) => total + repository.stargazers_count, 0);
+const latestRepository = repositories[0];
+const now = new Date();
+const dateFormat = new Intl.DateTimeFormat("en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+  timeZone: "UTC",
+  timeZoneName: "short",
+});
+
+const displayName = escapeXml(user.name || user.login);
+const login = escapeXml(user.login);
+const latestName = escapeXml(latestRepository?.name || "awaiting first deployment");
+const updated = escapeXml(dateFormat.format(now));
+const publicProjects = repositories.length;
+const followers = user.followers;
+
+const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1200 600">
+  <title id="title">Live network administration profile dashboard for ${displayName}</title>
+  <desc id="description">A Linux terminal-inspired profile card with current public GitHub statistics.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#05080d" />
+      <stop offset="55%" stop-color="#0b1320" />
+      <stop offset="100%" stop-color="#06101a" />
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e3a5f" stroke-opacity=".2" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="600" rx="24" fill="url(#background)" />
+  <rect width="1200" height="600" rx="24" fill="url(#grid)" />
+  <rect x="1" y="1" width="1198" height="598" rx="23" fill="none" stroke="#2563eb" stroke-opacity=".6" />
+  <path d="M 0 500 C 220 430 380 560 600 470 S 960 420 1200 485" fill="none" stroke="#0ea5e9" stroke-opacity=".18" stroke-width="2" />
+  <path d="M 0 515 C 220 445 380 575 600 485 S 960 435 1200 500" fill="none" stroke="#38bdf8" stroke-opacity=".25" stroke-width="1" />
+
+  <g fill="none" stroke="#38bdf8" stroke-opacity=".55" stroke-width="1.5">
+    <path d="M 76 120 H 198 L 248 170 H 354" />
+    <path d="M 846 126 H 972 L 1024 178 H 1138" />
+    <path d="M 74 450 H 160 L 222 390 H 328" />
+    <path d="M 866 438 H 980 L 1030 384 H 1134" />
+  </g>
+  <g fill="#38bdf8" filter="url(#glow)">
+    <circle cx="76" cy="120" r="4" /><circle cx="248" cy="170" r="4" /><circle cx="354" cy="170" r="4" />
+    <circle cx="846" cy="126" r="4" /><circle cx="1024" cy="178" r="4" /><circle cx="1138" cy="178" r="4" />
+    <circle cx="74" cy="450" r="4" /><circle cx="222" cy="390" r="4" /><circle cx="328" cy="390" r="4" />
+    <circle cx="866" cy="438" r="4" /><circle cx="1030" cy="384" r="4" /><circle cx="1134" cy="384" r="4" />
+  </g>
+
+  <rect x="56" y="48" width="1088" height="54" rx="12" fill="#05070b" stroke="#1e4976" />
+  <circle cx="84" cy="75" r="7" fill="#ef4444" /><circle cx="108" cy="75" r="7" fill="#f59e0b" /><circle cx="132" cy="75" r="7" fill="#22c55e" />
+  <text x="600" y="81" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" text-anchor="middle">netlab@azrael-c — profile-status</text>
+
+  <text x="72" y="156" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">$ ./status --live</text>
+  <text x="72" y="196" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="30" font-weight="700">${displayName}</text>
+  <text x="72" y="224" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">@${login}  •  Network Administration student</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">
+    <text x="72" y="282" fill="#38bdf8">SYSTEM</text>
+    <text x="72" y="314" fill="#94a3b8">theme</text><text x="260" y="314" fill="#e2e8f0">Kali / Linux lab</text>
+    <text x="72" y="346" fill="#94a3b8">focus</text><text x="260" y="346" fill="#e2e8f0">systems · networks · security</text>
+    <text x="72" y="378" fill="#94a3b8">approach</text><text x="260" y="378" fill="#e2e8f0">stable · observable · documented</text>
+    <text x="72" y="410" fill="#94a3b8">latest</text><text x="260" y="410" fill="#e2e8f0">${latestName}</text>
+  </g>
+
+  <rect x="668" y="148" width="420" height="288" rx="16" fill="#07111c" stroke="#2563eb" stroke-opacity=".6" />
+  <text x="700" y="192" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">PUBLIC TELEMETRY</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="700" y="245" fill="#94a3b8" font-size="16">projects</text><text x="1038" y="245" fill="#e2e8f0" font-size="25" text-anchor="end">${publicProjects}</text>
+    <line x1="700" y1="265" x2="1056" y2="265" stroke="#1e3a5f" />
+    <text x="700" y="306" fill="#94a3b8" font-size="16">followers</text><text x="1038" y="306" fill="#e2e8f0" font-size="25" text-anchor="end">${followers}</text>
+    <line x1="700" y1="326" x2="1056" y2="326" stroke="#1e3a5f" />
+    <text x="700" y="367" fill="#94a3b8" font-size="16">stars</text><text x="1038" y="367" fill="#e2e8f0" font-size="25" text-anchor="end">${totalStars}</text>
+    <line x1="700" y1="387" x2="1056" y2="387" stroke="#1e3a5f" />
+    <text x="700" y="418" fill="#22c55e" font-size="15">● ONLINE</text>
+  </g>
+
+  <text x="72" y="548" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">Last synced: ${updated}</text>
+  <text x="1128" y="548" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" text-anchor="end">generated by GitHub Actions</text>
+</svg>`;
+
+await mkdir(dirname(outputPath), { recursive: true });
+await writeFile(outputPath, svg, "utf8");
