@@ -38,6 +38,39 @@
       ]
     },
     {
+      "title": "- Toolkit",
+      "titleColor": {
+        "text": "#0969DA, #58A6FF",
+        "line": "#57606A, #8B949E"
+      },
+      "fields": [
+        {
+          "key": "Languages",
+          "value": "TypeScript, PHP, Python, Java, SQL",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "Web Stack",
+          "value": "React, Next.js, Vite, Supabase",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "IDE",
+          "value": "VS Code",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "CLI",
+          "value": "Bash, Git, GitHub",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        }
+      ]
+    },
+    {
       "title": "- Current Projects",
       "titleColor": {
         "text": "#0969DA, #58A6FF",
@@ -59,6 +92,54 @@
         {
           "key": "AgosLens PH",
           "value": "Flood and river explorer",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        }
+      ]
+    },
+    {
+      "title": "- Interests & Context",
+      "titleColor": {
+        "text": "#0969DA, #58A6FF",
+        "line": "#57606A, #8B949E"
+      },
+      "fields": [
+        {
+          "key": "Hobbies.Systems",
+          "value": "Linux ricing, network labs",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "Hobbies.Building",
+          "value": "Public-interest web tools",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "Currently",
+          "value": "Systems, observability, security",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        }
+      ]
+    },
+    {
+      "title": "- Contact",
+      "titleColor": {
+        "text": "#0969DA, #58A6FF",
+        "line": "#57606A, #8B949E"
+      },
+      "fields": [
+        {
+          "key": "GitHub",
+          "value": "github.com/{{username}}",
+          "keyColor": "#8250DF, #A371F7",
+          "valueColor": "#24292F, #C9D1D9"
+        },
+        {
+          "key": "Live Work",
+          "value": "FacultyConnect, HazardLens PH",
           "keyColor": "#8250DF, #A371F7",
           "valueColor": "#24292F, #C9D1D9"
         }
@@ -90,6 +171,16 @@
         "right": {
           "key": "Followers",
           "value": "{{followers}}"
+        }
+      },
+      {
+        "left": {
+          "key": "Forks",
+          "value": "{{forks}}"
+        },
+        "right": {
+          "key": "Following",
+          "value": "{{following}}"
         }
       },
       "loc"
